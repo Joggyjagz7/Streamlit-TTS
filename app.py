@@ -18,7 +18,7 @@ translator = Translator()
 text = st.text_input("Enter text")
 in_lang = st.selectbox(
     "Select your input language",
-    ("English", "Hindi", "Bengali", "korean", "Chinese", "Japanese"),
+    ("English", "Hindi", "Bengali", "korean", "Chinese", "Japanese","Indonesian"),
 )
 if in_lang == "English":
     input_language = "en"
@@ -32,10 +32,12 @@ elif in_lang == "Chinese":
     input_language = "zh-cn"
 elif in_lang == "Japanese":
     input_language = "ja"
+elif in_lang == "Indonesian":
+    input_language = "id"
 
 out_lang = st.selectbox(
     "Select your output language",
-    ("English", "Hindi", "Bengali", "korean", "Chinese", "Japanese"),
+    ("English", "Hindi", "Bengali", "korean", "Chinese", "Japanese","Indonesian"),
 )
 if out_lang == "English":
     output_language = "en"
@@ -49,6 +51,8 @@ elif out_lang == "Chinese":
     output_language = "zh-cn"
 elif out_lang == "Japanese":
     output_language = "ja"
+elif in_lang == "Indonesian":
+    input_language = "id"
 
 english_accent = st.selectbox(
     "Select your english accent",
@@ -61,6 +65,7 @@ english_accent = st.selectbox(
         "Australia",
         "Ireland",
         "South Africa",
+        "Indonesian",
     ),
 )
 
@@ -81,6 +86,8 @@ elif english_accent == "Ireland":
     tld = "ie"
 elif english_accent == "South Africa":
     tld = "co.za"
+elif english_accent == "Indonesian":
+    tld = "co.id"
 
 
 def text_to_speech(input_language, output_language, text, tld):
