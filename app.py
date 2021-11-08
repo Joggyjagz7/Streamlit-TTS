@@ -51,8 +51,8 @@ elif out_lang == "Chinese":
     output_language = "zh-cn"
 elif out_lang == "Japanese":
     output_language = "ja"
-elif in_lang == "Indonesian":
-    input_language = "id"
+# elif in_lang == "Indonesian":
+    # input_language = "id"
 
 english_accent = st.selectbox(
     "Select your english accent",
