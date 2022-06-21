@@ -16,6 +16,8 @@ st.title("Text to speech")
 translator = Translator()
 
 text = st.text_input("Enter text")
+buff, col, buff2 = st.beta_columns([1,3,1])
+
 in_lang = st.selectbox(
     "Select your input language",
     ("English", "Hindi", "Bengali", "korean", "Chinese", "Japanese","Indonesian"),
