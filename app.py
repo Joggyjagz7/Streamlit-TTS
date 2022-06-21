@@ -14,9 +14,9 @@ except:
     pass
 st.title("Text to speech")
 translator = Translator()
+buff, col, buff2 = st.beta_columns([4,6,4])
+text = col.text_input("Enter text")
 
-text = st.text_input("Enter text")
-buff, col, buff2 = st.beta_columns([1,3,1])
 
 in_lang = st.selectbox(
     "Select your input language",
